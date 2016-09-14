@@ -1,8 +1,8 @@
 #!/bin/bash
 
-flash --hostname swarm-dc1-pi01 https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip && \
-flash --hostname swarm-dc1-pi02 https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip && \
-flash --hostname swarm-dc1-pi03 https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip && \
-flash --hostname swarm-dc1-pi04 https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip && \
-flash --hostname swarm-dc1-pi05 https://downloads.hypriot.com/hypriotos-rpi-v0.8.0.img.zip && \
-
+i=1 # COUNT
+while [ $i -le $1 ]; do
+  echo swarm-dc1-pi0$i
+  flash --hostname swarm-dc1-pi0$1 https://downloads.hypriot.com/hypriotos-rpi-v$2.img.zip
+  let $[ i+=1 ] # incremente i de 1 a chaque boucle
+done
