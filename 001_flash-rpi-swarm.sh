@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# 2016 - PatrckBrs
 #set -xv
 
 HYPRIOT_VERSION="https://github.com/hypriot/image-builder-rpi/releases/download/v1.1.0/hypriotos-rpi-v1.1.0.img.zip"
